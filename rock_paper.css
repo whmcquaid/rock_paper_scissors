@@ -1,0 +1,76 @@
+html {
+ 
+    font-size: 20px;
+    background: url(https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/images/sn-rockpaper.jpg?itok=4WUMt1oc) bottom center;
+    background-size:100%;
+   background-repeat:no-repeat;
+   height: 100%;
+   width: 100%;}
+  
+  body,html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  .header {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-shadow: 0 0 5px slategray;
+    color: black;
+    padding-top: 5%;
+    font-weight: bolder;
+  }
+
+.result {
+ text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 35px;
+  color: blue;
+  padding-top: 5%;
+}
+.results {
+  text-align: center;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 25px;
+   color: blue;
+   padding-top: 5%;
+ }
+
+  .icons {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    padding-top: 5%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    border: .4rem solid black;
+    border-radius: 2rem;
+    margin: 1rem;
+    font-size: 6rem;
+    padding: 1rem .5rem;
+    transition: all .9s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+  }
+  .clicked {
+    transform: scale(1.8);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+  }
+
+  #wins{
+    text-align: center;
+  }
+  #loses{
+    padding-left: 25px;
+  }
+  #ties{
+   padding-left: 25px;
+  }

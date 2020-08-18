@@ -1,118 +1,16 @@
-<!--whmcquaid@gmail.com rock paper scissors console game for the odin project-->
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>rock paper scissors in the consold</title>
+  <link rel="stylesheet" href = "rock_paper.css">
+  <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <p>This is a game of rock paper scissors that can only be played in the developers console by typing game();</p>
-  <script>
- function computerPlay() {
-     let choice;
-    let getRandom = Math.random();
-    if (getRandom <= 1 && getRandom >= .6666667) {
-        choice = 'rock';
-    }
-    if (getRandom <= 0.6666666 && getRandom >= 0.3333334) {
-        choice = 'paper';
-    }
-    if (getRandom <= 0.3333333 && getRandom >= 0.0) {
-        choice = 'scissors';
-    }
-    console.log('The computer has chosen ' + choice);
-    return choice;
- }
-
- function playerChoice() {
-     let verify = 1;
-     let selection = prompt('Enter rock, paper, or scissors to play', 'scissors');
-     selection == null ? verify = 0 : selection = selection.toLowerCase();
-     
-
-   
-
-     if (selection != 'rock' && selection != 'paper' && selection != 'scissors') {
-         alert('ERROR! \n You will need to enter one of the three choices. \n Either rock, paper, or scissors.')
-         verify = 0;
-     }
-     while (verify != 1) {
-         selection = prompt('Enter rock, paper or scissors to play', 'rock');
-         selection == null ? verify = 0 : selection = selection.toLowerCase();
-         if (selection != 'rock' && selection != 'paper' && selection != 'scissors') {
-         alert('ERROR! \n You will need to enter one of the three choices. \n Either rock, paper, or scissors.');
-         verify = 0;
-     }
-     
-     else {
-         verify = 1;
-     }
-     }
-     console.log('You chose to play ' + selection);
-     return selection;
- }
-
- function whoWon(playerSelection, computerSelection){
-      let result;
-      if (playerSelection == computerSelection) {
-      result = 'Tie Game';
-      draws++;
-      console.log(result);
-      }
-      if (playerSelection == 'rock' && computerSelection == 'paper'){
-        result = 'You Lose! : Paper Covers Rock';
-        loses++;
-        console.log(result);
-      }
-      if (playerSelection == 'rock' && computerSelection == 'scissors'){
-        result = 'You Win! : Rock Crushes Scissors';
-        wins++;
-        console.log(result);
-      }
-      if (playerSelection == 'paper' && computerSelection == 'rock'){
-        result = 'You Win! : Paper Covers Rock';
-        wins++;
-        console.log(result);
-      }
-      if (playerSelection == 'paper' && computerSelection == 'scissors'){
-        result = 'You Lose! : Scissors Cut Paper';
-        loses++;
-        console.log(result);
-      }
-      if (playerSelection == 'scissors' && computerSelection == 'rock'){
-        result = 'You Lose! : Rock Crushes Scissors';
-        loses++;
-        console.log(result);
-      }
-      if (playerSelection == 'scissors' && computerSelection == 'paper'){
-        result = 'You Win! : Scissors Cut Paper';
-        wins++;
-        console.log(result);
-      }
-    return result;
-    }
-     function oneRound() {
-     let playerSelection = playerChoice();
-    let computerSelection = computerPlay();
-    whoWon(playerSelection, computerSelection);
-     }
-     let wins = 0;
-     let loses = 0;
-     let draws = 0;
-     let i = 0;
-     function game() {
-         while (i < 5) {
-             oneRound();
-             i++;
-         }
-         if (wins > loses) {
-         return ('Good game!! You have ' + wins + ' wins and ' + loses + ' loses with ' + draws + ' draws.');
-         }
-         else {
-             return('Better luck next time.  You have ' + wins + ' wins and ' + loses + ' loses with ' + draws + ' draws.')
-         }
-     }
-
-  </script>
+  <div id="container">
+  <div class = "header">Rock Paper Scissors vs. The Computer</div>
+  <div id="roundResult" class = "result"></div>
+  <div id="results" class = "result"><span id="wins">Wins: 0     </span><span id="loses">      Loses: 0     </span><span id="ties">        Ties: 0     </span></div>
+</div>
+<script type = "text/javascript" src = "rock_paper.js"></script>
 </body>
-</html>]
+</html>
