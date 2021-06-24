@@ -107,7 +107,7 @@ html {
       width: 10rem;
     }
     html {
-      background-width: stretch;
-      back
+      background-size: 100%;
+      background-repeat: repeat-y;
     }
 }
